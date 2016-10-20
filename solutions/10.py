@@ -2,8 +2,6 @@
 
 # Find the sum of all the primes below two million.
 
-import math
-
 def get_primes(n):
     try:
         _ = int(n)
@@ -19,7 +17,7 @@ def get_primes(n):
     primes = []
     for i in range(2,n+1):
         prime_flag = 1
-        for j in range(2, int(math.sqrt(i)+1)):
+        for j in range(2, int((i**0.5)+1),2):
             if (i%j==0):
                 prime_flag = 0
         
